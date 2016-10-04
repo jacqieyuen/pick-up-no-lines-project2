@@ -1,0 +1,27 @@
+extends layout.pug
+
+block header
+
+block title
+  title= title
+
+block content
+  ul
+  each val in candies
+    li
+      a(href='http://localhost:3000/' +  val.id data-id=val.id )= val.name + " | " + val.color + " | " + val.id
+      //- div#changeSmth(style='display: inline-block; color: blue; margin-left: 5px; font-size: 12px;')
+      //-   p Edit
+  div#info
+
+  div#edit
+    form
+      input.id(placeholder="ID" type="number")
+      input.color(placeholder="Color")
+      button(type="submit") Edit
+  div#add
+    form
+      input.id(placeholder="ID" type="number")
+      input.name(placeholder="Name")
+      input.color(placeholder="Color")
+      button(type="submit") Add

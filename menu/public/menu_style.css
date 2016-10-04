@@ -1,0 +1,41 @@
+.container {
+    padding-right: 0;
+    padding-left: 0;
+    border: solid;
+    margin-right: auto;
+    margin-left: auto;
+}
+.menuNav {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    display: block;
+    border: solid red;
+}
+
+#header1 {
+  text-align: center;
+}
+
+.menuTabs {
+  border: solid grey;
+}
+
+#secondRow {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+  display: block;
+  border: solid orange;
+}
+
+#thirdRow {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+  display: block;
+  border: solid blue;
+}

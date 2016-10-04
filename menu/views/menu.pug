@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Simply Life Pre - Order
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css', integrity='sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r', crossorigin='anonymous')
+    link(href='/menu_style.css', rel='stylesheet')
+  body
+    h1#header1 Main Menu Page
+    .container
+      #menuNav.row
+        #pastries.col-xs-2.col-xs.menuTabs
+          h5 pastries
+        #salad.col-xs-2.col-xs.menuTabs
+          h5 salad
+        #sandwiches.col-xs-2.col-xs.menuTabs
+          h5 sandwiches
+        #soup.col-xs-2.col-xs.menuTabs
+          h5 soup
+        #snacks.col-xs-2.col-xs.menuTabs
+          h5 snacks
+        #beverages.col-xs-2.col-xs.menuTabs
+          h5 beverages
+      #secondRow.row
+        .col-xs-12.inventoryBox
+            h4 Menu Items, Ajax
+      #thirdRow.row
+        .col-xs-12.basket
+          h3 Basket, submit button, direct to Checkout
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
