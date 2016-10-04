@@ -1,11 +1,16 @@
+#header1 {
+  text-align: center;
+}
+
 .container {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 10;
+    padding-left: 10;
     border: solid;
     margin-right: auto;
     margin-left: auto;
 }
-.menuNav {
+
+#menuNav {
     padding-right: 0;
     padding-left: 0;
     margin-right: 0;
@@ -14,28 +19,33 @@
     border: solid red;
 }
 
-#header1 {
-  text-align: center;
-}
-
 .menuTabs {
-  border: solid grey;
+/*    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;*/
+
+    border: solid grey;
 }
 
 #secondRow {
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: 0;
-  margin-left: 0;
-  display: block;
-  border: solid orange;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    display: block;
+    border: solid orange;
+}
+
+#header2 {
+  text-align: center;
 }
 
 #thirdRow {
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: 0;
-  margin-left: 0;
-  display: block;
-  border: solid blue;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    display: block;
+    border: solid blue;
 }
