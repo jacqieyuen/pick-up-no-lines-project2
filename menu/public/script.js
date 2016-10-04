@@ -70,10 +70,37 @@ createInventory("Water", "blah blah blah blah blah", "img", "price", "Beverages"
 
 function insertItems(){
   for (var item in inventoryList) {
-    $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+item+"</h4>"+"</div>");
+    $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
     console.log(item);
   }
   console.log("trying");
 };
 insertItems();
 console.log("working");
+
+function insertPastries(){
+  for (var item in inventoryList) {
+    if (inventoryList[item]['category']=="Pastries"){
+      $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+      console.log(item);
+    }
+  }
+  console.log("trying");
+};
+
+insertItems();
+console.log("working");
+
+$('#pastries').click(function(e){
+  console.log('pastries clicked');
+  e.preventDefault();
+
+  $.ajax({
+    method: 'GET',
+    url:'/',
+  }).done(function(){
+    $('.inventoryBox').html("");
+    $('.inventoryBox').append(insertPastries());
+      console.log('ajax success')
+  });
+});
