@@ -15,54 +15,54 @@ var createInventory = function(title, description, img, price, category){
 };
 
 //Pastries
-createInventory("Croissant", "blah blah blah blah blah", "img", "price", "Pastries");
-createInventory("Cinammon Roll", "blah blah blah blah blah", "img", "price", "Pastries");
-createInventory("Fruit Tart", "blah blah blah blah blah", "img", "price", "Pastries");
-createInventory("Chocolate Croissant", "blah blah blah blah blah", "img", "price", "Pastries");
-createInventory("Peach Danish", "blah blah blah blah blah", "img", "price", "Pastries");
-createInventory("Blueberry Muffin", "blah blah blah blah blah", "img", "price", "Pastries");
+createInventory("Croissant", "blah blah blah blah blah", "img", "5", "Pastries");
+createInventory("Cinammon Roll", "blah blah blah blah blah", "img", "5", "Pastries");
+createInventory("Fruit Tart", "blah blah blah blah blah", "img", "5", "Pastries");
+createInventory("Chocolate Croissant", "blah blah blah blah blah", "img", "5", "Pastries");
+createInventory("Peach Danish", "blah blah blah blah blah", "img", "5", "Pastries");
+createInventory("Blueberry Muffin", "blah blah blah blah blah", "img", "5", "Pastries");
 
 //Salad
-createInventory("Big Salad", "blah blah blah blah blah", "img", "price", "Salad");
-createInventory("Small Salad", "blah blah blah blah blah", "img", "price", "Salad");
+createInventory("Big Salad", "blah blah blah blah blah", "img", "5", "Salad");
+createInventory("Small Salad", "blah blah blah blah blah", "img", "10", "Salad");
 
 //Sandwiches
-createInventory("Salami Sandwich", "blah blah blah blah blah", "img", "price", "Sandwiches");
-createInventory("Parma Sandwich", "blah blah blah blah blah", "img", "price", "Sandwiches");
-createInventory("Egg and Ham Sandwich", "blah blah blah blah blah", "img", "price", "Sandwiches");
-createInventory("Ham and Brie Sandwich", "blah blah blah blah blah", "img", "price", "Sandwiches");
-createInventory("Tomato and Mozzarella Sandwich", "blah blah blah blah blah", "img", "price", "Sandwiches");
-createInventory("Portobello and Parmasean Sandwich", "blah blah blah blah blah", "img", "price", "Sandwiches");
+createInventory("Salami Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
+createInventory("Parma Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
+createInventory("Egg and Ham Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
+createInventory("Ham and Brie Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
+createInventory("Tomato and Mozzarella Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
+createInventory("Portobello and Parmasean Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
 
 //Soup
-createInventory("Pumpkin Soup", "blah blah blah blah blah", "img", "price", "Soup");
-createInventory("Mushroom Soup", "blah blah blah blah blah", "img", "price", "Soup");
-createInventory("Veggie Soup", "blah blah blah blah blah", "img", "price", "Soup");
+createInventory("Pumpkin Soup", "blah blah blah blah blah", "img", "15", "Soup");
+createInventory("Mushroom Soup", "blah blah blah blah blah", "img", "15", "Soup");
+createInventory("Veggie Soup", "blah blah blah blah blah", "img", "15", "Soup");
 
 //Snacks
-createInventory("Fruit Cup", "blah blah blah blah blah", "img", "price", "Snacks");
-createInventory("Kettle Chips, BBQ Flavour", "blah blah blah blah blah", "img", "price", "Snacks");
-createInventory("Kettle Chips, Cheddar Flavour", "blah blah blah blah blah", "img", "price", "Snacks");
-createInventory("Oat Bar", "blah blah blah blah blah", "img", "price", "Snacks");
-createInventory("Apple", "blah blah blah blah blah", "img", "price", "Snacks");
-createInventory("Bananna", "blah blah blah blah blah", "img", "price", "Snacks");
-createInventory("70% Chocolate", "blah blah blah blah blah", "img", "price", "Snacks");
-createInventory("Coffee Flavoured Chocolate", "blah blah blah blah blah", "img", "price", "Snacks");
-createInventory("Chilli Nut Trail", "blah blah blah blah blah", "img", "price", "Snacks");
+createInventory("Fruit Cup", "blah blah blah blah blah", "img", "15", "Snacks");
+createInventory("Kettle Chips, BBQ Flavour", "blah blah blah blah blah", "img", "15", "Snacks");
+createInventory("Kettle Chips, Cheddar Flavour", "blah blah blah blah blah", "img", "15", "Snacks");
+createInventory("Oat Bar", "blah blah blah blah blah", "img", "15", "Snacks");
+createInventory("Apple", "blah blah blah blah blah", "img", "15", "Snacks");
+createInventory("Bananna", "blah blah blah blah blah", "img", "15", "Snacks");
+createInventory("70% Chocolate", "blah blah blah blah blah", "img", "15", "Snacks");
+createInventory("Coffee Flavoured Chocolate", "blah blah blah blah blah", "img", "15", "Snacks");
+createInventory("Chilli Nut Trail", "blah blah blah blah blah", "img", "15", "Snacks");
 
 //Beverages
-createInventory("Cappucino", "blah blah blah blah blah", "img", "price", "Beverages");
-createInventory("Latte", "blah blah blah blah blah", "img", "price", "Beverages");
-createInventory("Flat White", "blah blah blah blah blah", "img", "price", "Beverages");
-createInventory("Americano", "blah blah blah blah blah", "img", "price", "Beverages");
-createInventory("Espresso", "blah blah blah blah blah", "img", "price", "Beverages");
-createInventory("Berry Smoothie", "blah blah blah blah blah", "img", "price", "Beverages");
-createInventory("Greenie Smoothie", "blah blah blah blah blah", "img", "price", "Beverages");
-createInventory("Orange Juice", "blah blah blah blah blah", "img", "price", "Beverages");
-createInventory("Grapefruit Juice", "blah blah blah blah blah", "img", "price", "Beverages");
-createInventory("Apple Juice", "blah blah blah blah blah", "img", "price", "Beverages");
-createInventory("Sparkling Water", "blah blah blah blah blah", "img", "price", "Beverages");
-createInventory("Water", "blah blah blah blah blah", "img", "price", "Beverages");
+createInventory("Cappucino", "blah blah blah blah blah", "img", "15", "Beverages");
+createInventory("Latte", "blah blah blah blah blah", "img", "15", "Beverages");
+createInventory("Flat White", "blah blah blah blah blah", "img", "15", "Beverages");
+createInventory("Americano", "blah blah blah blah blah", "img", "15", "Beverages");
+createInventory("Espresso", "blah blah blah blah blah", "img", "15", "Beverages");
+createInventory("Berry Smoothie", "blah blah blah blah blah", "img", "15", "Beverages");
+createInventory("Greenie Smoothie", "blah blah blah blah blah", "img", "15", "Beverages");
+createInventory("Orange Juice", "blah blah blah blah blah", "img", "15", "Beverages");
+createInventory("Grapefruit Juice", "blah blah blah blah blah", "img", "15", "Beverages");
+createInventory("Apple Juice", "blah blah blah blah blah", "img", "15", "Beverages");
+createInventory("Sparkling Water", "blah blah blah blah blah", "img", "15", "Beverages");
+createInventory("Water", "blah blah blah blah blah", "img", "15", "Beverages");
 
 ///////////////
 
@@ -73,10 +73,8 @@ function insertItems(){
     $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
     console.log(item);
   }
-  console.log("trying");
 };
 insertItems();
-console.log("working");
 
 function insertPastries(){
   for (var item in inventoryList) {
@@ -85,11 +83,7 @@ function insertPastries(){
       console.log(item);
     }
   }
-  console.log("trying");
 };
-
-insertItems();
-console.log("working");
 
 $('#pastries').click(function(e){
   console.log('pastries clicked');
@@ -101,6 +95,122 @@ $('#pastries').click(function(e){
   }).done(function(){
     $('.inventoryBox').html("");
     $('.inventoryBox').append(insertPastries());
+      console.log('ajax success')
+  });
+});
+
+
+function insertSalad(){
+  for (var item in inventoryList) {
+    if (inventoryList[item]['category']=="Salad"){
+      $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+      console.log(item);
+    }
+  }
+};
+
+$('#salad').click(function(e){
+  console.log('salad clicked');
+  e.preventDefault();
+
+  $.ajax({
+    method: 'GET',
+    url:'/',
+  }).done(function(){
+    $('.inventoryBox').html("");
+    $('.inventoryBox').append(insertSalad());
+      console.log('ajax success')
+  });
+});
+
+function insertSandwiches(){
+  for (var item in inventoryList) {
+    if (inventoryList[item]['category']=="Sandwiches"){
+      $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+      console.log(item);
+    }
+  }
+};
+
+$('#sandwiches').click(function(e){
+  console.log('sandwiches clicked');
+  e.preventDefault();
+
+  $.ajax({
+    method: 'GET',
+    url:'/',
+  }).done(function(){
+    $('.inventoryBox').html("");
+    $('.inventoryBox').append(insertSandwiches());
+      console.log('ajax success')
+  });
+});
+
+function insertSoup(){
+  for (var item in inventoryList) {
+    if (inventoryList[item]['category']=="Soup"){
+      $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+      console.log(item);
+    }
+  }
+};
+
+$('#soup').click(function(e){
+  console.log('soup clicked');
+  e.preventDefault();
+
+  $.ajax({
+    method: 'GET',
+    url:'/',
+  }).done(function(){
+    $('.inventoryBox').html("");
+    $('.inventoryBox').append(insertSoup());
+      console.log('ajax success')
+  });
+});
+
+function insertSnacks(){
+  for (var item in inventoryList) {
+    if (inventoryList[item]['category']=="Snacks"){
+      $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+      console.log(item);
+    }
+  }
+};
+
+$('#snacks').click(function(e){
+  console.log('snacks clicked');
+  e.preventDefault();
+
+  $.ajax({
+    method: 'GET',
+    url:'/',
+  }).done(function(){
+    $('.inventoryBox').html("");
+    $('.inventoryBox').append(insertSnacks());
+      console.log('ajax success')
+  });
+});
+
+function insertBeverages(){
+  for (var item in inventoryList) {
+    if (inventoryList[item]['category']=="Beverages"){
+      $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+      console.log(item);
+    }
+  }
+};
+
+$('#beverages').click(function(e){
+  console.log('beverages clicked');
+  e.preventDefault();
+
+  $.ajax({
+    method: 'GET',
+    url:'/',
+  }).done(function(){
+    $('.inventoryBox').html("");
+    $('.inventoryBox').append(insertBeverages());
       console.log('ajax success')
   });
 });
