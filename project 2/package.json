@@ -1,0 +1,35 @@
+{
+  "name": "pick-up-no-lines-project2",
+  "version": "1.0.0",
+  "description": "make a website for the simply life branch in landmark.  The website's main functionallity is so that customers will be able to pre-order their food.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacqieyuen/pick-up-no-lines-project2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacqieyuen/pick-up-no-lines-project2/issues"
+  },
+  "homepage": "https://github.com/jacqieyuen/pick-up-no-lines-project2#readme",
+  "dependencies": {
+    "pug": "^2.0.0-beta6",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  }
+}

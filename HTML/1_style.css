@@ -1,0 +1,52 @@
+.container {
+    padding-right: 0;
+    padding-left: 0;
+    height: 400px;
+    border: solid;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.register {
+    padding-right: 10;
+    padding-left: 10;
+    height: 50px;
+    border: solid;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.navBar {
+    padding-right: 10;
+    padding-left: 10;
+    height: 50px;
+    border: solid;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.inventoryBox {
+    padding-right: 10;
+    padding-left: 10;
+    height: 50px;
+    border: solid;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.basket {
+    padding-right: 10;
+    padding-left: 10;
+    height: 50px;
+    border: solid;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
