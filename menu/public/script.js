@@ -18,7 +18,7 @@ var createInventory = function(title, description, img, price, category){
 createInventory("Croissant", "blah blah blah blah blah", "img", "5", "Pastries");
 createInventory("Cinammon Roll", "blah blah blah blah blah", "img", "5", "Pastries");
 createInventory("Fruit Tart", "blah blah blah blah blah", "img", "5", "Pastries");
-createInventory("Chocolate Croissant", "blah blah blah blah blah", "img", "5", "Pastries");
+createInventory("ChocolateCroissant", "blah blah blah blah blah", "img", "5", "Pastries");
 createInventory("Peach Danish", "blah blah blah blah blah", "img", "5", "Pastries");
 createInventory("Blueberry Muffin", "blah blah blah blah blah", "img", "5", "Pastries");
 
@@ -29,10 +29,10 @@ createInventory("Small Salad", "blah blah blah blah blah", "img", "10", "Salad")
 //Sandwiches
 createInventory("Salami Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
 createInventory("Parma Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
-createInventory("Egg and Ham Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
-createInventory("Ham and Brie Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
-createInventory("Tomato and Mozzarella Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
-createInventory("Portobello and Parmasean Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
+createInventory("Egg & Ham Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
+createInventory("Ham & Brie Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
+createInventory("Tomato Mozza Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
+createInventory("Portobello Sandwich", "blah blah blah blah blah", "img", "15", "Sandwiches");
 
 //Soup
 createInventory("Pumpkin Soup", "blah blah blah blah blah", "img", "15", "Soup");
@@ -68,18 +68,22 @@ createInventory("Water", "blah blah blah blah blah", "img", "15", "Beverages");
 
 //function to input all the inventory into the inventoryBox
 
-function insertItems(){
+function insertAll(){
   for (var item in inventoryList) {
-    $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+    $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
     console.log(item);
   }
 };
-insertItems();
+insertAll();
+$('.inventoryItems').click(function(e){
+  var text = $(this).attr('id');
+  console.log(text);
+})
 
 function insertPastries(){
   for (var item in inventoryList) {
     if (inventoryList[item]['category']=="Pastries"){
-      $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
       console.log(item);
     }
   }
@@ -95,7 +99,11 @@ $('#pastries').click(function(e){
   }).done(function(){
     $('.inventoryBox').html("");
     $('.inventoryBox').append(insertPastries());
-      console.log('ajax success')
+      console.log('ajax success');
+    $('.inventoryItems').click(function(e){
+    var text = $(this).attr('id');
+    console.log(text);
+    });
   });
 });
 
@@ -103,7 +111,7 @@ $('#pastries').click(function(e){
 function insertSalad(){
   for (var item in inventoryList) {
     if (inventoryList[item]['category']=="Salad"){
-      $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
       console.log(item);
     }
   }
@@ -119,14 +127,18 @@ $('#salad').click(function(e){
   }).done(function(){
     $('.inventoryBox').html("");
     $('.inventoryBox').append(insertSalad());
-      console.log('ajax success')
+      console.log('ajax success');
+    $('.inventoryItems').click(function(e){
+    var text = $(this).attr('id');
+    console.log(text);
+    });
   });
 });
 
 function insertSandwiches(){
   for (var item in inventoryList) {
     if (inventoryList[item]['category']=="Sandwiches"){
-      $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
       console.log(item);
     }
   }
@@ -142,14 +154,18 @@ $('#sandwiches').click(function(e){
   }).done(function(){
     $('.inventoryBox').html("");
     $('.inventoryBox').append(insertSandwiches());
-      console.log('ajax success')
+      console.log('ajax success');
+    $('.inventoryItems').click(function(e){
+    var text = $(this).attr('id');
+    console.log(text);
+    });
   });
 });
 
 function insertSoup(){
   for (var item in inventoryList) {
     if (inventoryList[item]['category']=="Soup"){
-      $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
       console.log(item);
     }
   }
@@ -165,14 +181,18 @@ $('#soup').click(function(e){
   }).done(function(){
     $('.inventoryBox').html("");
     $('.inventoryBox').append(insertSoup());
-      console.log('ajax success')
+      console.log('ajax success');
+    $('.inventoryItems').click(function(e){
+    var text = $(this).attr('id');
+    console.log(text);
+    });
   });
 });
 
 function insertSnacks(){
   for (var item in inventoryList) {
     if (inventoryList[item]['category']=="Snacks"){
-      $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
       console.log(item);
     }
   }
@@ -188,14 +208,18 @@ $('#snacks').click(function(e){
   }).done(function(){
     $('.inventoryBox').html("");
     $('.inventoryBox').append(insertSnacks());
-      console.log('ajax success')
+      console.log('ajax success');
+    $('.inventoryItems').click(function(e){
+    var text = $(this).attr('id');
+    console.log(text);
+    });
   });
 });
 
 function insertBeverages(){
   for (var item in inventoryList) {
     if (inventoryList[item]['category']=="Beverages"){
-      $('.inventoryBox').append("<div class='col-xs-4'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
       console.log(item);
     }
   }
@@ -211,6 +235,29 @@ $('#beverages').click(function(e){
   }).done(function(){
     $('.inventoryBox').html("");
     $('.inventoryBox').append(insertBeverages());
-      console.log('ajax success')
+      console.log('ajax success');
+    $('.inventoryItems').click(function(e){
+    var text = $(this).attr('id');
+    console.log(text);
+    });
   });
 });
+
+$('#header1').click(function(e){
+  console.log('#header1 clicked');
+  e.preventDefault();
+
+  $.ajax({
+    method: 'GET',
+    url:'/',
+  }).done(function(){
+    $('.inventoryBox').html("");
+    $('.inventoryBox').append(insertAll());
+      console.log('ajax success');
+    $('.inventoryItems').click(function(e){
+    var text = $(this).attr('id');
+    console.log(text);
+    });
+  });
+});
+

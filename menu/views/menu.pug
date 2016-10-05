@@ -7,7 +7,8 @@ html(lang='en')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css', integrity='sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r', crossorigin='anonymous')
     link(href='/menu_style.css', rel='stylesheet')
   body
-    h1#header1 Menu
+    h1#header1
+      a(href='#')#header1 Menu
     .container
       nav#menuNav.navbar.navbar-default.row
         .container-fluid
@@ -30,6 +31,28 @@ html(lang='en')
       #thirdRow.row
         .col-xs-12.basket
           h3 Basket, submit button, direct to Checkout
+
+    h1#header3 Checkout
+    .container
+      nav#menuNav.navbar.navbar-default.row
+        .container-fluid
+          ul.nav.navbar-nav
+            li.col-xs-2.menuTabs
+              a(href='#') XXX
+            li.col-xs-2.menuTabs
+              a(href='#') XXX
+            li.col-xs-2.menuTabs
+              a(href='#') XXX
+            li.col-xs-2.menuTabs
+              a(href='#') XXX
+      #secondRow.row
+        h4#header2 Menu Items
+        .col-xs-12
+      #thirdRow.row
+        .col-xs-12.Done
+          h3 Done, submit button, direct to Order Summary
+
+
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
     script(src='/ajax.js')
