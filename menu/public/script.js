@@ -98,7 +98,7 @@ function menuCheckout(){
     var text = $(this).attr('id');
     var inventoryPrice = inventoryList[text]['price'];
     console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><img src='pug.jpg'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><img src='pug.jpg'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn deleteButton'>Delete</button></div></div>");
     numInventoryPrice = Number(inventoryPrice);
     Total = Total+numInventoryPrice;
     $('#totalPrice').html("<h2 id='totalPrice'>$ "+Total+"</h2>");
@@ -119,7 +119,7 @@ function ajax1(yay){
     var text = $(this).attr('id');
     var inventoryPrice = inventoryList[text]['price'];
     console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><img src='pug.jpg'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn deleteButton'>Delete</button></div></div>");
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><img src='pug.jpg'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button  type='button' class='btn deleteButton'>Delete</button></div></div>");
     numInventoryPrice = Number(inventoryPrice);
     Total = Total+numInventoryPrice;
     $('#totalPrice').html("<h2 id='totalPrice'>$ "+Total+"</h2>");
