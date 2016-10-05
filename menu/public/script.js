@@ -81,13 +81,14 @@ $('.inventoryItems').click(function(e){
   var text = $(this).attr('id');
   var inventoryPrice = inventoryList[text]['price'];
   console.log(text);
-  $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
+  $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
   numInventoryPrice = Number(inventoryPrice);
   Total = Total+numInventoryPrice;
+  stringTotal = Total.toString();
+  $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
   console.log("the total is "+Total);
-  deleteFromBasket();
+  deleteFromBasket(Total);
 })
-
 
 function insertPastries(){
   for (var item in inventoryList) {
@@ -111,9 +112,14 @@ $('#pastries').click(function(e){
       console.log('ajax success');
     $('.inventoryItems').click(function(e){
     var text = $(this).attr('id');
+    var inventoryPrice = inventoryList[text]['price'];
     console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryList[text]['price']+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-    console.log(inventoryPrice);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
+    numInventoryPrice = Number(inventoryPrice);
+    Total = Total+numInventoryPrice;
+    stringTotal = Total.toString();
+    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
+    console.log("the total is "+Total);
     deleteFromBasket();
     });
   });
@@ -142,9 +148,14 @@ $('#salad').click(function(e){
       console.log('ajax success');
     $('.inventoryItems').click(function(e){
     var text = $(this).attr('id');
+    var inventoryPrice = inventoryList[text]['price'];
     console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryList[text]['price']+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-    console.log(inventoryPrice);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
+    numInventoryPrice = Number(inventoryPrice);
+    Total = Total+numInventoryPrice;
+    stringTotal = Total.toString();
+    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
+    console.log("the total is "+Total);
     deleteFromBasket();
     });
   });
@@ -172,9 +183,14 @@ $('#sandwiches').click(function(e){
       console.log('ajax success');
     $('.inventoryItems').click(function(e){
     var text = $(this).attr('id');
+    var inventoryPrice = inventoryList[text]['price'];
     console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryList[text]['price']+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-    console.log(inventoryPrice);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
+    numInventoryPrice = Number(inventoryPrice);
+    Total = Total+numInventoryPrice;
+    stringTotal = Total.toString();
+    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
+    console.log("the total is "+Total);
     deleteFromBasket();
     });
   });
@@ -202,9 +218,14 @@ $('#soup').click(function(e){
       console.log('ajax success');
     $('.inventoryItems').click(function(e){
     var text = $(this).attr('id');
+    var inventoryPrice = inventoryList[text]['price'];
     console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryList[text]['price']+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-    console.log(inventoryPrice);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
+    numInventoryPrice = Number(inventoryPrice);
+    Total = Total+numInventoryPrice;
+    stringTotal = Total.toString();
+    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
+    console.log("the total is "+Total);
     deleteFromBasket();
     });
   });
@@ -232,9 +253,14 @@ $('#snacks').click(function(e){
       console.log('ajax success');
     $('.inventoryItems').click(function(e){
     var text = $(this).attr('id');
+    var inventoryPrice = inventoryList[text]['price'];
     console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryList[text]['price']+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-    console.log(inventoryPrice);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
+    numInventoryPrice = Number(inventoryPrice);
+    Total = Total+numInventoryPrice;
+    stringTotal = Total.toString();
+    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
+    console.log("the total is "+Total);
     deleteFromBasket();
     });
   });
@@ -262,9 +288,14 @@ $('#beverages').click(function(e){
       console.log('ajax success');
     $('.inventoryItems').click(function(e){
     var text = $(this).attr('id');
+    var inventoryPrice = inventoryList[text]['price'];
     console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryList[text]['price']+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-    console.log(inventoryPrice);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
+    numInventoryPrice = Number(inventoryPrice);
+    Total = Total+numInventoryPrice;
+    stringTotal = Total.toString();
+    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
+    console.log("the total is "+Total);
     deleteFromBasket();
     });
   });
@@ -286,15 +317,28 @@ $('#header1').click(function(e){
     var inventoryPrice = inventoryList[text]['price'];
     console.log(text);
     $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-    console.log(inventoryPrice);
-    deleteFromBasket();
+    numInventoryPrice = Number(inventoryPrice);
+    Total = Total+numInventoryPrice;
+    stringTotal = Total.toString();
+    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
+    console.log("the total is "+Total);
+    deleteFromBasket(Total);
     });
   });
 });
 
-function deleteFromBasket(){
-    $('.btn').click(function(e){
-      console.log('delete function init-ed')
+function deleteFromBasket(Total){
+    $('.btn').off().click(function(e){
+      console.log('delete function init-ed');
+      var minus = $(this).parent().prev().text();
+      minus = minus.replace('$','');
+      console.log(Total);
+      console.log('minus this '+minus);
+      numMinus = Number(minus);
+      Total = Total-numMinus;
+      stringTotal = Total.toString();
+    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
+      console.log("the total is "+Total);
       $(this).parent().parent().remove();
     });
 }
