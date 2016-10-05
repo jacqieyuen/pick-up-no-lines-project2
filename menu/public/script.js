@@ -68,7 +68,14 @@ createInventory("Water", "blah blah blah blah blah", "img", "15", "Beverages");
 
 //function to input all the inventory into the inventoryBox
 
-var Total = 0
+var Total     = 0
+var a         = "Pastries";
+var b         = "Salad";
+var c         = "Sandwiches";
+var d         = "Soup";
+var f         = "Snacks";
+var g         = "Beverages";
+
 
 function insertAll(){
   for (var item in inventoryList) {
@@ -76,230 +83,70 @@ function insertAll(){
     console.log(item);
   }
 };
+
+function insertCategory(something){
+  for (var item in inventoryList) {
+    if (inventoryList[item]['category']==something){
+      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+      console.log(item);
+    }
+  }
+};
+function menuCheckout(){
+  $('.inventoryItems').off().click(function(e){
+    console.log('inventory item clicked');
+    var text = $(this).attr('id');
+    var inventoryPrice = inventoryList[text]['price'];
+    console.log(text);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
+    numInventoryPrice = Number(inventoryPrice);
+    Total = Total+numInventoryPrice;
+    $('#totalPrice').html("<h2 id='totalPrice'>$ "+Total+"</h2>");
+    console.log("the total is "+Total);
+    deleteFromBasket();
+  });
+}
+
+function ajax1(yay){
+  $.ajax({
+    method: 'GET',
+    url:'/',
+  }).done(function(){
+    $('.inventoryBox').html("");
+    $('.inventoryBox').append(insertCategory(yay));
+      console.log('ajax success');
+    $('.inventoryItems').off().click(function(e){
+    var text = $(this).attr('id');
+    var inventoryPrice = inventoryList[text]['price'];
+    console.log(text);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
+    numInventoryPrice = Number(inventoryPrice);
+    Total = Total+numInventoryPrice;
+    $('#totalPrice').html("<h2 id='totalPrice'>$ "+Total+"</h2>");
+    console.log("the total is "+Total);
+    deleteFromBasket();
+    });
+  });
+}
+
+function deleteFromBasket(){
+    console.log(Total)
+    $('.btn').off().click(function(e){
+      console.log('delete function init-ed');
+      var minus = $(this).parent().prev().text();
+      minus = minus.replace('$','');
+      console.log(Total);
+      console.log('minus this '+minus);
+      numMinus = Number(minus);
+      Total = Total-numMinus;
+    $('#totalPrice').html("<h2 id='totalPrice'>$ "+Total+"</h2>");
+      console.log("the total is "+Total);
+      $(this).parent().parent().remove();
+    });
+  }
+
 insertAll();
-$('.inventoryItems').click(function(e){
-  var text = $(this).attr('id');
-  var inventoryPrice = inventoryList[text]['price'];
-  console.log(text);
-  $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-  numInventoryPrice = Number(inventoryPrice);
-  Total = Total+numInventoryPrice;
-  stringTotal = Total.toString();
-  $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
-  console.log("the total is "+Total);
-  deleteFromBasket(Total);
-})
-
-function insertPastries(){
-  for (var item in inventoryList) {
-    if (inventoryList[item]['category']=="Pastries"){
-      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
-      console.log(item);
-    }
-  }
-};
-
-$('#pastries').click(function(e){
-  console.log('pastries clicked');
-  e.preventDefault();
-
-  $.ajax({
-    method: 'GET',
-    url:'/',
-  }).done(function(){
-    $('.inventoryBox').html("");
-    $('.inventoryBox').append(insertPastries());
-      console.log('ajax success');
-    $('.inventoryItems').click(function(e){
-    var text = $(this).attr('id');
-    var inventoryPrice = inventoryList[text]['price'];
-    console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-    numInventoryPrice = Number(inventoryPrice);
-    Total = Total+numInventoryPrice;
-    stringTotal = Total.toString();
-    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
-    console.log("the total is "+Total);
-    deleteFromBasket();
-    });
-  });
-});
-
-
-function insertSalad(){
-  for (var item in inventoryList) {
-    if (inventoryList[item]['category']=="Salad"){
-      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
-      console.log(item);
-    }
-  }
-};
-
-$('#salad').click(function(e){
-  console.log('salad clicked');
-  e.preventDefault();
-
-  $.ajax({
-    method: 'GET',
-    url:'/',
-  }).done(function(){
-    $('.inventoryBox').html("");
-    $('.inventoryBox').append(insertSalad());
-      console.log('ajax success');
-    $('.inventoryItems').click(function(e){
-    var text = $(this).attr('id');
-    var inventoryPrice = inventoryList[text]['price'];
-    console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-    numInventoryPrice = Number(inventoryPrice);
-    Total = Total+numInventoryPrice;
-    stringTotal = Total.toString();
-    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
-    console.log("the total is "+Total);
-    deleteFromBasket();
-    });
-  });
-});
-
-function insertSandwiches(){
-  for (var item in inventoryList) {
-    if (inventoryList[item]['category']=="Sandwiches"){
-      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
-      console.log(item);
-    }
-  }
-};
-
-$('#sandwiches').click(function(e){
-  console.log('sandwiches clicked');
-  e.preventDefault();
-
-  $.ajax({
-    method: 'GET',
-    url:'/',
-  }).done(function(){
-    $('.inventoryBox').html("");
-    $('.inventoryBox').append(insertSandwiches());
-      console.log('ajax success');
-    $('.inventoryItems').click(function(e){
-    var text = $(this).attr('id');
-    var inventoryPrice = inventoryList[text]['price'];
-    console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-    numInventoryPrice = Number(inventoryPrice);
-    Total = Total+numInventoryPrice;
-    stringTotal = Total.toString();
-    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
-    console.log("the total is "+Total);
-    deleteFromBasket();
-    });
-  });
-});
-
-function insertSoup(){
-  for (var item in inventoryList) {
-    if (inventoryList[item]['category']=="Soup"){
-      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
-      console.log(item);
-    }
-  }
-};
-
-$('#soup').click(function(e){
-  console.log('soup clicked');
-  e.preventDefault();
-
-  $.ajax({
-    method: 'GET',
-    url:'/',
-  }).done(function(){
-    $('.inventoryBox').html("");
-    $('.inventoryBox').append(insertSoup());
-      console.log('ajax success');
-    $('.inventoryItems').click(function(e){
-    var text = $(this).attr('id');
-    var inventoryPrice = inventoryList[text]['price'];
-    console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-    numInventoryPrice = Number(inventoryPrice);
-    Total = Total+numInventoryPrice;
-    stringTotal = Total.toString();
-    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
-    console.log("the total is "+Total);
-    deleteFromBasket();
-    });
-  });
-});
-
-function insertSnacks(){
-  for (var item in inventoryList) {
-    if (inventoryList[item]['category']=="Snacks"){
-      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
-      console.log(item);
-    }
-  }
-};
-
-$('#snacks').click(function(e){
-  console.log('snacks clicked');
-  e.preventDefault();
-
-  $.ajax({
-    method: 'GET',
-    url:'/',
-  }).done(function(){
-    $('.inventoryBox').html("");
-    $('.inventoryBox').append(insertSnacks());
-      console.log('ajax success');
-    $('.inventoryItems').click(function(e){
-    var text = $(this).attr('id');
-    var inventoryPrice = inventoryList[text]['price'];
-    console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-    numInventoryPrice = Number(inventoryPrice);
-    Total = Total+numInventoryPrice;
-    stringTotal = Total.toString();
-    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
-    console.log("the total is "+Total);
-    deleteFromBasket();
-    });
-  });
-});
-
-function insertBeverages(){
-  for (var item in inventoryList) {
-    if (inventoryList[item]['category']=="Beverages"){
-      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
-      console.log(item);
-    }
-  }
-};
-
-$('#beverages').click(function(e){
-  console.log('beverages clicked');
-  e.preventDefault();
-
-  $.ajax({
-    method: 'GET',
-    url:'/',
-  }).done(function(){
-    $('.inventoryBox').html("");
-    $('.inventoryBox').append(insertBeverages());
-      console.log('ajax success');
-    $('.inventoryItems').click(function(e){
-    var text = $(this).attr('id');
-    var inventoryPrice = inventoryList[text]['price'];
-    console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-    numInventoryPrice = Number(inventoryPrice);
-    Total = Total+numInventoryPrice;
-    stringTotal = Total.toString();
-    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
-    console.log("the total is "+Total);
-    deleteFromBasket();
-    });
-  });
-});
+menuCheckout();
 
 $('#header1').click(function(e){
   console.log('#header1 clicked');
@@ -312,34 +159,45 @@ $('#header1').click(function(e){
     $('.inventoryBox').html("");
     $('.inventoryBox').append(insertAll());
       console.log('ajax success');
-    $('.inventoryItems').click(function(e){
-    var text = $(this).attr('id');
-    var inventoryPrice = inventoryList[text]['price'];
-    console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
-    numInventoryPrice = Number(inventoryPrice);
-    Total = Total+numInventoryPrice;
-    stringTotal = Total.toString();
-    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
-    console.log("the total is "+Total);
-    deleteFromBasket(Total);
-    });
-  });
+    menuCheckout();
+});
 });
 
-function deleteFromBasket(Total){
-    $('.btn').off().click(function(e){
-      console.log('delete function init-ed');
-      var minus = $(this).parent().prev().text();
-      minus = minus.replace('$','');
-      console.log(Total);
-      console.log('minus this '+minus);
-      numMinus = Number(minus);
-      Total = Total-numMinus;
-      stringTotal = Total.toString();
-    $('#totalPrice').html("<h2 id='totalPrice'>$ "+stringTotal+"</h2>");
-      console.log("the total is "+Total);
-      $(this).parent().parent().remove();
-    });
-}
-//re-calculate total by minus-ing
+$('#pastries').click(function(e){
+  console.log('pastries clicked');
+  e.preventDefault();
+  ajax1(a);
+});
+
+
+$('#salad').click(function(e){
+  console.log('salad clicked');
+  e.preventDefault();
+  ajax1(b);
+});
+
+$('#sandwiches').click(function(e){
+  console.log('sandwiches clicked');
+  e.preventDefault();
+  ajax1(c);
+});
+
+
+$('#soup').click(function(e){
+  console.log('soup clicked');
+  e.preventDefault();
+  ajax1(d);
+});
+
+
+$('#snacks').click(function(e){
+  console.log('soup clicked');
+  e.preventDefault();
+  ajax1(f);
+});
+
+$('#beverages').click(function(e){
+  console.log('beverages clicked');
+  e.preventDefault();
+  ajax1(g);
+});
