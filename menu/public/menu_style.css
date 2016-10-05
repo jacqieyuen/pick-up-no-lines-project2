@@ -123,4 +123,6 @@ h2 {
   right: auto;
   text-align: center;
   transform: translate(-50%, 0);
+  height: 250px;
+  overflow: scroll;
 }

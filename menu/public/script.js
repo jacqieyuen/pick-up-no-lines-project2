@@ -202,6 +202,8 @@ $('#beverages').click(function(e){
   ajax1(g);
 });
 
+///////////////////////////////////////////////////
+
 var currentTime = new Date();
 var currentHour = currentTime.getHours();
 var currentMinute = currentTime.getMinutes();
@@ -217,10 +219,37 @@ function listOfTimes(){
     for(currentHour; currentHour<=20; currentHour++){
       console.log("the hour is "+currentHour);
       for(minuteRounded; minuteRounded<=55; minuteRounded = minuteRounded+5){
-        console.log("time available is "+currentHour+":"+minuteRounded)
-      }
+        var Minute = 0
+        if (minuteRounded<=6){
+          Minute = "0"+minuteRounded;
+        }else{
+          Minute = minuteRounded};
+        var availableTime = currentHour+":"+Minute;
+        console.log("time available is "+currentHour+":"+Minute);
+        $('.dropdown-menu').append('<li role="presentation"><a class="timesAvailable" role="menuitem" tabindex="-1" href="#">'+availableTime+'</a></li>')
+      };
     };
   }
 }
 
-listOfTimes()
+function pickedTime(){
+  $('.timesAvailable').off().click(function(e){
+  console.log('Time has been picked')
+  e.preventDefault();
+  var timeChoosen = $(this).text();
+  $('.dropdown-toggle').html("");
+  $('.dropdown-toggle').append(timeChoosen);
+  });
+}
+
+$('#menu1').click(function(e){
+  console.log('Pick a Time clicked');
+  e.preventDefault();
+  $.ajax({
+    method: 'GET',
+    url:'/',
+  }).done(function(){
+    listOfTimes();
+    pickedTime();
+  });
+});
