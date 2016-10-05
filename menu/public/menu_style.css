@@ -71,7 +71,7 @@
   background-color: grey;
 }
 
-#thirdRow {
+.Done {
     padding-right: 0;
     padding-left: 0;
     margin-right: 0;
@@ -92,4 +92,12 @@
   height: 400px;
   overflow: scroll;
   border: solid orange;
+}
+
+.totalBox {
+  border: solid green;
+}
+
+#totalPrice {
+  text-align: center;
 }
