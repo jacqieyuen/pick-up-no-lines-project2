@@ -126,3 +126,12 @@ h2 {
   height: 250px;
   overflow: scroll;
 }
+
+img {
+  width : 60%;
+}
+#eighthRow.row {
+  height: 400px;
+  overflow: scroll;
+  border: solid orange;
+}

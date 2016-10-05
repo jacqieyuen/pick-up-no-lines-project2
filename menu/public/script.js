@@ -79,7 +79,7 @@ var g         = "Beverages";
 
 function insertAll(){
   for (var item in inventoryList) {
-    $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+    $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<img src='pug.jpg'><h4>"+item+"</h4>"+"</div>");
     console.log(item);
   }
 };
@@ -87,7 +87,7 @@ function insertAll(){
 function insertCategory(something){
   for (var item in inventoryList) {
     if (inventoryList[item]['category']==something){
-      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<h4>"+inventoryList[item]['category']+"   "+item+"</h4>"+"</div>");
+      $('.inventoryBox').append("<div class= 'col-xs-4 inventoryItems "+inventoryList[item]['category']+"' id='"+item+"'>"+"<img src='pug.jpg'><h4>"+item+"</h4>"+"</div>");
       console.log(item);
     }
   }
@@ -98,7 +98,7 @@ function menuCheckout(){
     var text = $(this).attr('id');
     var inventoryPrice = inventoryList[text]['price'];
     console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><img src='pug.jpg'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
     numInventoryPrice = Number(inventoryPrice);
     Total = Total+numInventoryPrice;
     $('#totalPrice').html("<h2 id='totalPrice'>$ "+Total+"</h2>");
@@ -119,7 +119,7 @@ function ajax1(yay){
     var text = $(this).attr('id');
     var inventoryPrice = inventoryList[text]['price'];
     console.log(text);
-    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><img src='pug.jpg'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryPrice+"</h4></div><div class='col-cs-4'><button type='button' class='btn deleteButton'>Delete</button></div></div>");
     numInventoryPrice = Number(inventoryPrice);
     Total = Total+numInventoryPrice;
     $('#totalPrice').html("<h2 id='totalPrice'>$ "+Total+"</h2>");
@@ -131,7 +131,7 @@ function ajax1(yay){
 
 function deleteFromBasket(){
     console.log(Total)
-    $('.btn').off().click(function(e){
+    $('.deleteButton').off().click(function(e){
       console.log('delete function init-ed');
       var minus = $(this).parent().prev().text();
       minus = minus.replace('$','');
@@ -207,6 +207,7 @@ $('#beverages').click(function(e){
 var flag = false;
 var currentTime = new Date();
 var currentHour = currentTime.getHours();
+currentHour = currentHour+1
 var currentMinute = currentTime.getMinutes();
 function round5(x) {
 if (x<55){
@@ -216,7 +217,7 @@ return Math.ceil(x/5)*5;
 var minuteRounded = round5(currentMinute);
 
 function listOfTimes(){
-  if(currentHour>=7){
+  if(currentHour){
     for(currentHour; currentHour<=20; currentHour++){
       console.log("the hour is "+currentHour);
       if(flag){
@@ -244,12 +245,12 @@ function pickedTime(){
   console.log('Time has been picked')
   e.preventDefault();
   var timeChoosen = $(this).text();
-  $('.dropdown-toggle').html("");
-  $('.dropdown-toggle').append(timeChoosen);
+  $('#menu1').text("");
+  $('#menu1').append(timeChoosen);
   });
 }
 
-$('#menu1').click(function(e){
+$('#menu1').off().click(function(e){
   console.log('Pick a Time clicked');
   currentTime = new Date();
   e.preventDefault();
@@ -260,4 +261,15 @@ $('#menu1').click(function(e){
     listOfTimes();
     pickedTime();
   });
+});
+
+function displayPickUpTime(){
+  var whenToPickUp = $('#menu1').text();
+  console.log(whenToPickUp);
+  $('#pickUpTimeCode').html("");
+  $('#pickUpTimeCode').append(whenToPickUp);
+}
+
+$('#toOrderSummary').click(function(){
+  displayPickUpTime()
 });
