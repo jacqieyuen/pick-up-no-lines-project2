@@ -78,6 +78,8 @@ insertAll();
 $('.inventoryItems').click(function(e){
   var text = $(this).attr('id');
   console.log(text);
+  $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryList[text]['price']+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
+  deleteFromBasket();
 })
 
 function insertPastries(){
@@ -103,6 +105,7 @@ $('#pastries').click(function(e){
     $('.inventoryItems').click(function(e){
     var text = $(this).attr('id');
     console.log(text);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryList[text]['price']+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
     });
   });
 });
@@ -131,6 +134,7 @@ $('#salad').click(function(e){
     $('.inventoryItems').click(function(e){
     var text = $(this).attr('id');
     console.log(text);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryList[text]['price']+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
     });
   });
 });
@@ -158,6 +162,7 @@ $('#sandwiches').click(function(e){
     $('.inventoryItems').click(function(e){
     var text = $(this).attr('id');
     console.log(text);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryList[text]['price']+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
     });
   });
 });
@@ -185,6 +190,7 @@ $('#soup').click(function(e){
     $('.inventoryItems').click(function(e){
     var text = $(this).attr('id');
     console.log(text);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryList[text]['price']+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
     });
   });
 });
@@ -212,6 +218,7 @@ $('#snacks').click(function(e){
     $('.inventoryItems').click(function(e){
     var text = $(this).attr('id');
     console.log(text);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryList[text]['price']+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
     });
   });
 });
@@ -239,6 +246,7 @@ $('#beverages').click(function(e){
     $('.inventoryItems').click(function(e){
     var text = $(this).attr('id');
     console.log(text);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4'><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryList[text]['price']+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
     });
   });
 });
@@ -257,7 +265,14 @@ $('#header1').click(function(e){
     $('.inventoryItems').click(function(e){
     var text = $(this).attr('id');
     console.log(text);
+    $('.basketBox').append("<div class='col-xs-12'><div class='col-xs-4 '><h4>"+text+"</h4></div><div class='col-xs-4'><h4>$"+inventoryList[text]['price']+"</h4></div><div class='col-cs-4'><button type='button' class='btn'>Delete</button></div></div>");
     });
   });
 });
 
+function deleteFromBasket(){
+    $('.btn').click(function(e){
+      console.log('delete function init-ed')
+      $(this).parent().parent().remove();
+    });
+}

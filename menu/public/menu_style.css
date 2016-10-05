@@ -46,14 +46,6 @@
   text-align: center;
 }
 
-#thirdRow {
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: 0;
-    margin-left: 0;
-    display: block;
-    border: solid blue;
-}
 
 .Pastries {
   background-color: pink;
@@ -77,4 +69,27 @@
 
 .Beverages {
   background-color: grey;
+}
+
+#thirdRow {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    display: block;
+    border: solid blue;
+}
+
+#header3 {
+  text-align: center;
+}
+
+#header4 {
+  text-align: center;
+}
+
+.basketBox {
+  height: 400px;
+  overflow: scroll;
+  border: solid orange;
 }

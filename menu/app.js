@@ -16,12 +16,8 @@ app.get('/', function (req, res) {
   res.render('menu');
 });
 
-app.get('/checkout', function (req,res) {
-  res.render('checkout');
-});
 
 //LISTENER
 app.listen(3000, function () {
-  console.log ('listening on port 3000'); // Have to add this listener
+  console.log ('listening on port 3000');
 });
-
