@@ -201,3 +201,26 @@ $('#beverages').click(function(e){
   e.preventDefault();
   ajax1(g);
 });
+
+var currentTime = new Date();
+var currentHour = currentTime.getHours();
+var currentMinute = currentTime.getMinutes();
+function round5(x) {
+if (x<55){
+return Math.ceil(x/5)*5;
+}else{return 0}
+};
+var minuteRounded = round5(currentMinute);
+
+function listOfTimes(){
+  if(currentHour>=7){
+    for(currentHour; currentHour<=20; currentHour++){
+      console.log("the hour is "+currentHour);
+      for(minuteRounded; minuteRounded<=55; minuteRounded = minuteRounded+5){
+        console.log("time available is "+currentHour+":"+minuteRounded)
+      }
+    };
+  }
+}
+
+listOfTimes()

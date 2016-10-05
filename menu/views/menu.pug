@@ -30,7 +30,7 @@ html(lang='en')
         .col-xs-12.inventoryBox
       #thirdRow.row
         .col-xs-12.basket
-          h3 Basket, submit button, direct to Checkout
+          h2 Basket, submit button, direct to Checkout
 
     h1#header3 Checkout
     .container
@@ -38,10 +38,28 @@ html(lang='en')
         h5#header4 Your Items
         .col-xs-12.basketBox
         .col-xs-12.totalBox
-          h2#totalPrice 00.00
-      #thirdRow.row
+          h2#totalPrice 0
+      #fifthRow.row
+        .col-xs-12.pickTime
+          .dropdown
+            button#menu1.btn.btn-primary.center-block.dropdown-toggle(type='button', data-toggle='dropdown')
+              | Pick A Time
+            ul.dropdown-menu(role='menu', aria-labelledby='menu1')
+              //- li(role='presentation')
+              //-   a(role='menuitem', tabindex='-1', href='#') HTML
+              //- li(role='presentation')
+              //-   a(role='menuitem', tabindex='-1', href='#') CSS
+              //- li(role='presentation')
+              //-   a(role='menuitem', tabindex='-1', href='#') JavaScript
+              //- li.divider(role='presentation')
+              //- li(role='presentation')
+              //-   a(role='menuitem', tabindex='-1', href='#') About Us
+      #sixthRow.row
+        .col-xs-12.pickPayment
+          h2 Pick a Payment Option
+      #seventhRow.row
         .col-xs-12.Done
-          h3 Done, submit button, direct to Order Summary
+          h2 Done, submit button, direct to Order Summary
 
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')

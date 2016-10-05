@@ -101,3 +101,26 @@
 #totalPrice {
   text-align: center;
 }
+
+.pickTime{
+  border: solid pink;
+}
+
+.pickPayment{
+  border: solid brown;
+}
+
+h2 {
+  text-align: center;
+}
+
+.dropdown-toggle {
+  width: 50%;
+}
+.dropdown-menu {
+  left: 50%;
+  width: 50%;
+  right: auto;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
