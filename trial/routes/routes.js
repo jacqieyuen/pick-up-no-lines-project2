@@ -27,6 +27,7 @@ module.exports = function(app, passport){
     res.render('2_main_menu');
   });
 
+
   app.get('/logout', function(req, res){
     req.logout();
     res.redirect('/');

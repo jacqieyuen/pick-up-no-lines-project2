@@ -6,7 +6,147 @@ html, body {
   overflow: hidden;
 }
 
-#map {
-  height: 100%;
-  width:100%;
+#header1 {
+  text-align: center;
+  color: black;
+}
+
+.container {
+    padding-right: 10;
+    padding-left: 10;
+    border: solid;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#menuNav {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    display: block;
+    border: solid red;
+}
+
+.menuTabs {
+/*    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;*/
+
+    border: solid grey;
+}
+
+#secondRow {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border: solid orange;
+}
+
+.inventoryBox {
+  height: 400px;
+  overflow: scroll;
+}
+
+#toCheckoutButton {
+  left: 50%;
+  width: 50%;
+  right: auto;
+  text-align: center;
+  transform: translate(-50%, 0);
+  overflow: scroll;
+}
+
+.Pastries {
+  background-color: pink;
+}
+
+.Salad {
+  background-color: yellow;
+}
+
+.Sandwiches {
+  background-color: teal;
+}
+
+.Soup {
+  background-color: orange;
+}
+
+.Snacks {
+  background-color: blue;
+}
+
+.Beverages {
+  background-color: grey;
+}
+
+.Done {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    display: block;
+    border: solid blue;
+}
+
+#header3 {
+  text-align: center;
+}
+
+#header4 {
+  text-align: center;
+}
+
+.basketBox {
+  height: 400px;
+  overflow: scroll;
+  border: solid orange;
+}
+
+.totalBox {
+  border: solid green;
+}
+
+#totalPrice {
+  text-align: center;
+}
+
+.pickTime{
+  border: solid pink;
+}
+
+.pickPayment{
+  border: solid brown;
+}
+
+h2 {
+  text-align: center;
+}
+
+.dropdown-toggle {
+  left: 50%;
+  width: 50%;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
+.dropdown-menu {
+  left: 50%;
+  width: 50%;
+  right: auto;
+  text-align: center;
+  transform: translate(-50%, 0);
+  height: 200px;
+  overflow: scroll;
+}
+
+img {
+  width : 60%;
+}
+#eighthRow.row {
+  /*height: 50%;*/
+  overflow: scroll;
+  border: solid orange;
 }
