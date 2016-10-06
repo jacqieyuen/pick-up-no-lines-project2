@@ -65,53 +65,6 @@ createInventory("Sparkling Water", "blah blah blah blah blah", "img", "15", "Bev
 createInventory("Water", "blah blah blah blah blah", "img", "15", "Beverages");
 
 ///////////////
-
-//HIDE SHOW FUNCTIONS
-function menuInit(){
-  $("#checkoutContainer").hide();
-  $("#orderSumContainer").hide();
-};
-
-function clickToCheckOutButton(){
-  $("#checkoutContainer").show();
-  $("#menuContainer").hide();
-}
-
-function clickToOrderSummaryButton(){
-  if(isNaN(timeChoosen[0])){
-    alert("Please Pick A Time");
-    console.log
-  }else{
-  $("#checkoutContainer").hide();
-  $("#orderSumContainer").show();
-  };
-}
-
-function clickFinishButton(){
-  $("#orderSumContainer").hide();
-  $("#menuContainer").show();
-  $('.basketBox').html('');
-  $('#menu1').text("");
-  $('#menu1').append("Pick A Time");
-  timeChoosen = "hello";
-}
-
-menuInit();
-$('#toCheckoutButton').click(function(){
-  clickToCheckOutButton();
-});
-$("#toOrderSummaryButton").click(function(){
-  clickToOrderSummaryButton();
-})
-$("#finishButton").click(function(){
-  clickFinishButton();
-})
-
-//Finish Button
-
-//on finish delete everything in checkout box.
-
-
 ///////////////////
 var Total        = 0
 var a            = "Pastries";
@@ -122,6 +75,9 @@ var f            = "Snacks";
 var g            = "Beverages";
 var timeChoosen  = "hello";
 
+
+insertAll();
+menuCheckout();
 
 function insertAll(){
   for (var item in inventoryList) {
@@ -190,11 +146,6 @@ function deleteFromBasket(){
       $(this).parent().parent().remove();
     });
   }
-
-
-
-insertAll();
-menuCheckout();
 
 $('#header1').click(function(e){
   console.log('#header1 clicked');
@@ -280,7 +231,7 @@ function listOfTimes(){
           Minute = minuteRounded};
         var availableTime = currentHour+":"+Minute;
         console.log("time available is "+currentHour+":"+Minute);
-        $('.dropdown-menu').append('<li role="presentation"><a class="timesAvailable" role="menuitem" tabindex="-1" href="#">'+availableTime+'</a></li>');
+        $('#dropDown1').append('<li role="presentation"><a class="timesAvailable" role="menuitem" tabindex="-1" href="#">'+availableTime+'</a></li>');
         flag = true;
         // minuteRounded = 0;
       };
@@ -328,4 +279,46 @@ $('#toOrderSummaryButton').click(function(){
   displayCheckoutSummary();
 });
 
+//////////////////////////////////////////
 
+// //HIDE SHOW FUNCTIONS
+// function menuInit(){
+//   $("#checkoutContainer").hide();
+//   $("#orderSumContainer").hide();
+// };
+
+// function clickToCheckOutButton(){
+//   $("#checkoutContainer").show();
+//   $("#menuContainer").hide();
+// }
+
+// function clickToOrderSummaryButton(){
+//   if(isNaN(timeChoosen[0])){
+//     alert("Please Pick A Time");
+//     console.log
+//   }else{
+//   $("#checkoutContainer").hide();
+//   $("#orderSumContainer").show();
+//   };
+// }
+
+// function clickFinishButton(){
+//   $("#orderSumContainer").hide();
+//   $("#menuContainer").show();
+//   $('.basketBox').html('');
+//   $('#menu1').text("");
+//   $('#menu1').append("Pick A Time");
+//   timeChoosen = "hello";
+//   Total = 0;
+// }
+
+// menuInit();
+// $('#toCheckoutButton').click(function(){
+//   clickToCheckOutButton();
+// });
+// $("#toOrderSummaryButton").click(function(){
+//   clickToOrderSummaryButton();
+// })
+// $("#finishButton").click(function(){
+//   clickFinishButton();
+// })

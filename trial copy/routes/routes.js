@@ -43,6 +43,10 @@ module.exports = function(app, passport){
     res.render('1_2_login', {message: req.flash('loginMessage')});
   });
 
+  app.get('/profile', function(req, res){
+    res.render('3_profile');
+  });
+
   app.get('/mainmenu', function(req, res){
     res.render('2_main_menu');
   });

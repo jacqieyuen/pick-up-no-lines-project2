@@ -3,20 +3,52 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  background-image: url("blackfloor.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.a1 {
+  color: white;
+  display: block;
+  text-align: center;
+}
+
+
+.deleteButton {
+  float: right;
+}
+h4 {
+  color: white;
+  text-align: center;
+}
+
+.inventoryItems {
+  display: block;
+}
+h1{
+  color: white;
+  text-align: right;
+}
+
+#profileButton{
+  float: right;
 }
 
 #header1 {
-  text-align: center;
-  color: black;
+  text-align: right;
+  color: white;
+  display: inline;
 }
 
 .container {
+    margin-top: 5%;
     padding-right: 10;
     padding-left: 10;
     border: solid;
     margin-right: auto;
     margin-left: auto;
+    height: 90%;
 }
 
 #menuNav {
@@ -25,31 +57,35 @@ html, body {
     margin-right: 0;
     margin-left: 0;
     display: block;
-    border: solid red;
-}
-
-.menuTabs {
-/*    padding-right: 0;
-    padding-left: 0;
-    margin-right: 0;
-    margin-left: 0;*/
-
     border: solid grey;
 }
 
+.menuTabs {
+    float: center;
+}
+
 #secondRow {
+    margin-top: 5%;
     padding-right: 0;
     padding-left: 0;
     margin-right: 0;
     margin-left: 0;
-    border: solid orange;
+    border: solid grey;
 }
 
 .inventoryBox {
-  height: 400px;
+  height: 600px;
   overflow: scroll;
 }
 
+.inventoryItems {
+  margin-top: 2%;
+}
+
+#thirdRow {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
 #toCheckoutButton {
   left: 50%;
   width: 50%;
@@ -57,9 +93,10 @@ html, body {
   text-align: center;
   transform: translate(-50%, 0);
   overflow: scroll;
+  vertical-align: center;
 }
 
-.Pastries {
+/*.Pastries {
   background-color: pink;
 }
 
@@ -81,7 +118,7 @@ html, body {
 
 .Beverages {
   background-color: grey;
-}
+}*/
 
 .Done {
     padding-right: 0;
@@ -92,10 +129,6 @@ html, body {
     border: solid blue;
 }
 
-#header3 {
-  text-align: center;
-}
-
 #header4 {
   text-align: center;
 }
@@ -103,27 +136,21 @@ html, body {
 .basketBox {
   height: 400px;
   overflow: scroll;
-  border: solid orange;
+  border: solid grey;
 }
 
 .totalBox {
-  border: solid green;
+  /*border: solid green*/;
 }
 
 #totalPrice {
   text-align: center;
-}
-
-.pickTime{
-  border: solid pink;
-}
-
-.pickPayment{
-  border: solid brown;
+  color: white;
 }
 
 h2 {
   text-align: center;
+  color: white;
 }
 
 .dropdown-toggle {
@@ -132,7 +159,7 @@ h2 {
   text-align: center;
   transform: translate(-50%, 0);
 }
-.dropdown-menu {
+#dropDown1 {
   left: 50%;
   width: 50%;
   right: auto;
@@ -142,11 +169,17 @@ h2 {
   overflow: scroll;
 }
 
+#dropDown2 {
+  left: 50%;
+  width: 50%;
+  right: auto;
+  text-align: center;
+  transform: translate(-50%, 0);
+  overflow: scroll;
+}
+
 img {
   width : 60%;
-}
-#eighthRow.row {
-  /*height: 50%;*/
-  overflow: scroll;
-  border: solid orange;
+  display: block;
+  margin: auto;
 }

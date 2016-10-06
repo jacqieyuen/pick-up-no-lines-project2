@@ -29,11 +29,5 @@ module.exports = function(app, passport){
 
   });
 
-  Inventory.findOne({title: 'Croissant'}, function(err,obj){
-  console.log(obj);
-});
-
-
-
 
 }
