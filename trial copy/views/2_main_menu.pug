@@ -1,0 +1,70 @@
+extends base/layout
+
+block main
+
+    #menuContainer.container
+      h1#header1
+        a(href='#')#header1 Menu
+      nav#menuNav.navbar.navbar-default.row
+        .container-fluid
+          ul.nav.navbar-nav
+            li#pastries.col-xs-2.menuTabs
+              a(href='#') Pastries
+            li#salad.col-xs-2.menuTabs
+              a(href='#') Salad
+            li#sandwiches.col-xs-2.menuTabs
+              a(href='#') Sandwiches
+            li#soup.col-xs-2.menuTabs
+              a(href='#') Soup
+            li#snacks.col-xs-2.menuTabs
+              a(href='#') Snacks
+            li#beverages.col-xs-2.menuTabs
+              a(href='#') Beverages
+      #secondRow.row
+        h4#header2 Menu Items
+        .col-xs-12.inventoryBox
+      #thirdRow.row
+        .col-xs-12.toBasket
+          button#toCheckoutButton.btn.btn-primary.center-block(type='button', data-toggle='dropdown')
+            |To Checkout
+
+
+    #checkoutContainer.container
+      h1#header3 Checkout
+      #fourthRow.row
+        h5#header4 Your Items
+        .col-xs-12.basketBox
+        .col-xs-12.totalBox
+          h2#totalPrice 0
+      #fifthRow.row
+        .col-xs-12.pickTime
+          h1 time
+          .dropdown
+            button#menu1.btn.btn-primary.center-block.dropdown-toggle(type='button', data-toggle='dropdown')
+              | Pick A Time
+            ul.dropdown-menu(role='menu', aria-labelledby='menu1')
+      #sixthRow.row
+        .col-xs-12.pickPayment
+          h2 Pick a Payment Option
+      #seventhRow.row
+        #toOrder.col-xs-12
+          button#toOrderSummaryButton.btn.btn-primary.center-block(type='button', data-toggle='dropdown')
+            |Done
+
+
+    #orderSumContainer.container
+      h1#header4 Order Summary
+      #eighthRow.row
+        .col-xs-12.orderTicket
+          #qrCode.col-xs-6
+            img(src='lib/img/qrcode.png')
+          .col-xs-6
+            h1 Pick me up at this time:
+            #pickUpTimeCode.col-xs-12
+      #ninthRow.row
+        .col-xs-12.Summary
+          h2 Display your order
+      .row
+        .col-xs-12.toMainMenu
+          button#finishButton.btn.btn-primary.center-block(type='button', data-toggle='dropdown')
+            |Finish
