@@ -131,7 +131,7 @@ img {
   width : 60%;
 }
 #eighthRow.row {
-  height: 400px;
+  /*height: 50%;*/
   overflow: scroll;
   border: solid orange;
 }

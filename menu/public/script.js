@@ -218,7 +218,7 @@ var minuteRounded = round5(currentMinute);
 
 function listOfTimes(){
   if(currentHour>=6){
-    for(currentHour; currentHour<=21; currentHour++){
+    for(currentHour; currentHour<=19; currentHour++){
       console.log("the hour is "+currentHour);
       if(flag){
         minuteRounded=0
@@ -237,7 +237,7 @@ function listOfTimes(){
         // minuteRounded = 0;
       };
     };
-  }else{alert("We are open between 7am-9pm. You may start placing orders at 6am and last order is at 8pm")}
+  }else{alert("We are open between 7am-9pm. You may start placing orders at 6am and last order is at 7:55pm")}
 }
 
 function pickedTime(){
@@ -271,6 +271,7 @@ function displayPickUpTime(){
 }
 
 function displayCheckoutSummary(){
+  $(".Summary").html('');
   $('#fourthRow').clone().appendTo(".Summary");
 };
 
