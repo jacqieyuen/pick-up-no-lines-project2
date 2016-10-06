@@ -1,33 +1,22 @@
-var inventory = require('../model/inventory')
+// var inventory = require('../model/inventory')
 
 
-module.exports = function(app, passport){
+// module.exports = function(app, passport){
 
-  // router middelware
-  function isLoggedIn(req, res, next) {
-    if(req.isAuthenticated()) {
-      return next();
-    }
-    res.redirect('/')
-  }
-
-
-  app.get('/inventory/:id', function(err, inv){
-
-    var id = req.params.id;
-
-    Inventory.findById(id, function(err, i){
-
-      if(err){
-        return res.json('error': err);
-      }
-
-      res.json(i);
-    });
+//   // router middelware
+//   function isLoggedIn(req, res, next) {
+//     if(req.isAuthenticated()) {
+//       return next();
+//     }
+//     res.redirect('/')
+//   }
 
 
+//   app.get('/inventory1', function(req, res){
 
-  });
+//     res.json(req.inventories);
+
+//   });
 
 
-}
+// }

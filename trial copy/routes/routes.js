@@ -22,10 +22,7 @@ module.exports = function(app, passport){
       if(err){
         res.send(err);
       }
-
-      res.render('inventory', {inventory: foods});
-
-
+      res.json(foods)
     });
   });
 
