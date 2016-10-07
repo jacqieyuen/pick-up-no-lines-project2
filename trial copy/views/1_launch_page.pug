@@ -3,27 +3,33 @@ extends base/layout
 block main
   .container
     .row
-      .col-sm-8.col-sm-offset-2
-        h1 Launch Page
-    .row
-      .col-sm-8.col-sm-offset-2
-
+        h1 Place Your Order Today!
+        p no lines just pick ups ;)
+    #launchSelects.container
+      .row
         form(action='/login', method='get')
-          button.btn.btn-warning.btn-lg(type='submit') Log In
-        hr
+          .centerButtons
+            button.btn.btn-lg.buttonlaunch.opacityButton(type='submit') Log In
+          hr
         form(action='/signup', method='get')
-          button.btn.btn-warning.btn-lg(type='submit') Sign Up
-        hr
-    .row
-        .col-sm-8.col-sm-offset-2
-          a(href='/auth/facebook')
+          .centerButtons
+            button.btn.btn-lg.buttonlaunch.opacityButton(type='submit') Sign Up
+          hr
+      .row
+        .centerButtons
+          a.btn.btn-block.btn-social.btn-facebook.opacityButton(href='/auth/facebook')
             span.fa.fa-facebook
-        hr
-    .row
-        .col-sm-8.col-sm-offset-2
-          a(href='/auth/twitter')
+            |  Sign in with Facebook
+          hr
+      .row
+        .centerButtons
+          a.btn.btn-block.btn-social.btn-twitter.opacityButton(href='/auth/twitter')
             span.fa.fa-twitter
-    .row
-        .col-sm-8.col-sm-offset-2
-          a(href='/auth/twitter')
-            span.fa.fa-google-plus
+            |  Sign in with Twitter
+
+
+        //- a(href='/auth/twitter')
+        //-   span.fa.fa-twitter
+    //- .row
+    //-   a(href='/auth/XXXXXXXX')
+    //-     span.fa.fa-google-plus

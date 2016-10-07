@@ -1,54 +1,102 @@
-html, body {
+html *
+{
+   /*font-size: 1em !important;*/
+   /*color: #000 !important;*/
+   font-family: "Times New Roman", Times, serif;
+}
+
+body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   background-image: url("blackfloor.jpg");
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   background-attachment: fixed;
   background-position: center;
 }
+
+.container-fluid {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#launchSelects{
+  margin-top: 7%;
+}
+
+label {
+  color: white;
+  font-size: 150%;
+}
+
+#signUpBox {
+  width: 40%;
+  margin: auto;
+}
+#logInBox {
+  width: 40%;
+  margin: auto;
+}
+
+
 .a1 {
   color: white;
   display: block;
   text-align: center;
 }
 
+#SignUpHeader {
+  margin-top: 3%;
+  text-align: center;
+  margin-bottom: 6%;
+}
+
+#loginHeader {
+  margin-top: 3%;
+  text-align: center;
+  margin-bottom: 6%;
+}
 
 .deleteButton {
   float: right;
 }
-h4 {
+h7 {
+  display: block;
   color: white;
   text-align: center;
+  margin-top: 3%;
 }
 
 .inventoryItems {
   display: block;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  height:30%;
 }
 h1{
   color: white;
-  text-align: right;
+  text-align: center;
+}
+
+p{
+  color: white;
+  text-align: center;
 }
 
 #profileButton{
   float: right;
+  margin-right: 3%;
 }
 
 #header1 {
-  text-align: right;
+  text-align: center;
   color: white;
   display: inline;
 }
 
-.container {
-    margin-top: 5%;
-    padding-right: 10;
-    padding-left: 10;
-    border: solid;
-    margin-right: auto;
-    margin-left: auto;
-    height: 90%;
+
+.centerButtons {
+  text-align: center;
 }
 
 #menuNav {
@@ -57,7 +105,16 @@ h1{
     margin-right: 0;
     margin-left: 0;
     display: block;
-    border: solid grey;
+    /*border: .4px dotted white;*/
+    overflow: visible;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.opacityButton {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+  margin: 0 auto;
 }
 
 .menuTabs {
@@ -65,21 +122,39 @@ h1{
 }
 
 #secondRow {
+
+    height: 60vh;
+    margin-top: 3%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#fourthRow {
     margin-top: 5%;
     padding-right: 0;
     padding-left: 0;
     margin-right: 0;
     margin-left: 0;
-    border: solid grey;
+    /*border: solid grey;*/
 }
-
 .inventoryBox {
-  height: 600px;
+  height: 50vh;
   overflow: scroll;
 }
-
-.inventoryItems {
+#preview {
   margin-top: 2%;
+  height: 50vh;
+}
+#previewBasket{
+  margin-top: 1%;
+  height: 40vh;
+  background-color: rgba(0, 0, 0, 0.3);
+
+}
+.inventoryItems {
+  margin-top: 5%;
 }
 
 #thirdRow {
@@ -131,12 +206,20 @@ h1{
 
 #header4 {
   text-align: center;
+  color: white;
 }
 
 .basketBox {
   height: 400px;
   overflow: scroll;
-  border: solid grey;
+  background-color: rgba(0, 0, 0, 0.5);
+  /*border: solid grey;*/
+}
+
+ #eighthRow {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3%;
+  margin-top: 5%;
 }
 
 .totalBox {
@@ -144,11 +227,17 @@ h1{
 }
 
 #totalPrice {
+
   text-align: center;
   color: white;
 }
 
 h2 {
+  text-align: center;
+  color: white;
+}
+
+h5 {
   text-align: center;
   color: white;
 }
@@ -179,7 +268,13 @@ h2 {
 }
 
 img {
-  width : 60%;
+
+  width : 50%;
   display: block;
+  margin: auto;
+}
+
+#qrCode {
+  width: 35%;
   margin: auto;
 }

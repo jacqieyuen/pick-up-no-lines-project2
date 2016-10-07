@@ -3,10 +3,9 @@ extends base/layout
 block main
   .container
     .row
-      .col-sm-8.col-sm-offset-2
-        h1 Login
+      h1#loginHeader L O G I N
     .row
-      .col-sm-8.col-sm-offset-2
+      #logInBox
         if (message.length > 0)
           .alert.alert-danger #{message}
         form(action='/login', method='post')
@@ -16,5 +15,7 @@ block main
           .form-group
             label Password
             input.form-control(type='password', name='password')
-          button.btn.btn-warning.btn-lg(type='submit') Login
+          .centerButtons
+            a.btn.btn-lg.opacityButton(href='/', role='button') Back
+            button.btn.btn-lg.opacityButton(type='submit') Login
         hr

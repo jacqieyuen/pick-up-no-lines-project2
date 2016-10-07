@@ -1,4 +1,5 @@
 const Inventory = require('../model/inventory');
+const User = require('../model/user')
 
 
 module.exports = function(app, passport){
@@ -15,7 +16,7 @@ module.exports = function(app, passport){
 // GET FUNCTIONS. aka. pages to load to. -----------
 
 
-  app.get('/inventory', function(req, res, next){
+  app.get('/inventory', isLoggedIn, function(req, res, next){
 
 
     Inventory.find({}, function(err, foods){
@@ -26,7 +27,9 @@ module.exports = function(app, passport){
     });
   });
 
-
+  app.get('/user', isLoggedIn, function(req,res, next){
+    res.json(req.user)
+  });
 
   app.get('/', function(req, res){
     res.render('1_launch_page');
@@ -40,11 +43,11 @@ module.exports = function(app, passport){
     res.render('1_2_login', {message: req.flash('loginMessage')});
   });
 
-  app.get('/profile', function(req, res){
+  app.get('/profile',  isLoggedIn, function(req, res){
     res.render('3_profile');
   });
 
-  app.get('/mainmenu', function(req, res){
+  app.get('/mainmenu', isLoggedIn, function(req, res){
     res.render('2_main_menu');
   });
 

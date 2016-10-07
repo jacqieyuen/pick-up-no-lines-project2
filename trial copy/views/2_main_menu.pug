@@ -2,77 +2,80 @@ extends base/layout
 
 block main
 
-    #menuContainer.container
+    #menuContainer.container-fluid
       .row
-        .col-xs-7
-          h1
-            a(href='#')#header1 Menu
-        .col-xs-5
-          a#profileButton.btn.btn-info(href='/profile', role='button') Profile
+        a#profileButton.btn.opacityButton(href='/profile', role='button') Profile
+      .row
+        h1
+          a(href='#')#header1 M  E  N  U
       nav#menuNav.navbar.navbar-default.row
-        .container-fluid
-          ul.nav.navbar-nav
-            li#pastries.col-xs-2.menuTabs
-              a(href='#').a1 Pastries
-            li#salad.col-xs-2.menuTabs
-              a(href='#').a1 Salad
-            li#sandwiches.col-xs-2.menuTabs
-              a(href='#').a1 Sandwiches
-            li#soup.col-xs-2.menuTabs
-              a(href='#').a1 Soup
-            li#snacks.col-xs-2.menuTabs
-              a(href='#').a1 Snacks
-            li#beverages.col-xs-2.menuTabs
-              a(href='#').a1 Beverages
+        //- .container-fluid
+        ul.nav.navbar-nav
+          li#pastries.col-xs-2.menuTabs
+            a(href='#').a1 PASTRIES
+          li#salad.col-xs-2.menuTabs
+            a(href='#').a1 SALAD
+          li#sandwiches.col-xs-2.menuTabs
+            a(href='#').a1 SANDWICHES
+          li#soup.col-xs-2.menuTabs
+            a(href='#').a1 SOUP
+          li#snacks.col-xs-2.menuTabs
+            a(href='#').a1 SNACKS
+          li#beverages.col-xs-2.menuTabs
+            a(href='#').a1 BEVERAGES
       #secondRow.row
-        .col-xs-12.inventoryBox
+        .col-xs-8.inventoryBox
+        #preview.col-xs-4
+          h5#header4 Your Items
+          #previewBasket.col-xs-12.basketBox
+          .col-xs-12.totalBox
+          h5#totalPrice1 No Items Selected
       #thirdRow.row
         .col-xs-12.toBasket
-          button#toCheckoutButton.btn.btn-primary.center-block(type='button', data-toggle='dropdown')
+          button#toCheckoutButton.btn.btn-primary.center-block.opacityButton(type='button', data-toggle='dropdown')
             |To Checkout
 
-    #checkoutContainer.container
+    #checkoutContainer.container-fluid
       .row
-        .col-xs-7
-          h1#header3 Checkout
-        .col-xs-5
-          a#profileButton.btn.btn-info(href='/profile', role='button') Profile
+        h3#header3 C H E C K O U T
+        button#backToMenu.btn.btn-primary.opacityButton(type='button')
+            |back
       #fourthRow.row
         h5#header4 Your Items
         .col-xs-12.basketBox
         .col-xs-12.totalBox
-          h2#totalPrice 0
+          h5#totalPrice No Items Selected
       #fifthRow.row
         .col-xs-12.pickTime
           .dropdown
-            button#menu1.btn.btn-primary.center-block.dropdown-toggle(type='button', data-toggle='dropdown')
+            button#menu1.btn.btn-primary.center-block.dropdown-toggle.opacityButton(type='button', data-toggle='dropdown')
               | Pick A Time
             ul#dropDown1.dropdown-menu(role='menu', aria-labelledby='menu1')
-      #sixthRow.row
-        .col-xs-12.pickPayment
-          .dropdown
-            button#menu2.btn.btn-primary.center-block.dropdown-toggle(type='button', data-toggle='dropdown')
-              | Pick A Payment
-            ul#dropDown2.dropdown-menu(role='menu', aria-labelledby='menu1')
+      //- #sixthRow.row
+      //-   .col-xs-12.pickPayment
+      //-     .dropdown
+      //-       button#menu2.btn.btn-primary.center-block.dropdown-toggle(type='button', data-toggle='dropdown')
+      //-         | Pick A Payment
+      //-       ul#dropDown2.dropdown-menu(role='menu', aria-labelledby='menu1')
       #seventhRow.row
-        #toOrder.col-xs-12
-          button#toOrderSummaryButton.btn.btn-primary.center-block(type='button', data-toggle='dropdown')
+        #toOrder.col-xs-12.centerButtons
+          button#toOrderSummaryButton.btn.btn-primary.center-block.opacityButton(type='button')
             |Done
 
 
-    #orderSumContainer.container
-      h1#header4 Order Summary
+
+    #orderSumContainer.container-fluid
+      h3#header4 O R D E R - S U M M A R Y
       #eighthRow.row
         .col-xs-12.orderTicket
           #qrCode.col-xs-6
             img(src='lib/img/qrcode.png')
           .col-xs-6
-            h1 Pick me up at this time:
+            h5 Pick me up at this time:
             #pickUpTimeCode.col-xs-12
       #ninthRow.row
         .col-xs-12.Summary
-          h2 Your Order Summary
       .row
-        .col-xs-12.toMainMenu
-          button#finishButton.btn.btn-primary.center-block(type='button', data-toggle='dropdown')
+        .centerButtons
+          button#finishButton.btn.btn-primary.center-block.opacityButton(type='button')
             |Finish
